@@ -12,23 +12,27 @@ $(document).ready(function () {
     const sushi = document.getElementById("sushi").checked;
     const icecream = document.getElementById("icecream").checked;
 
-    let answer1 = "";
-    let answer2 = "";
-    let answer3 = "";
-
-    if (green === true) {
-      console.log("green");
-      answer1 = "green";
-      console.log(answer1);
-    } else if (blue === true) {
-      console.log("blue");
-      answer2 = "blue";
-    } else if (pink === true) {
-      console.log("pink");
-      answer3 = "pink";
+    if (green && dog && burger) {
+      $(".celebrity").hide();
+      $("#Queen").show();
+    } else if (blue && cat && sushi) {
+      $(".celebrity").hide();
+      $("#Cher").show();
+    } else if (green && cat && burger) {
+      $(".celebrity").hide();
+      $("#sylvester-staloner").show();
+    } else if (pink && cat && sushi) {
+      $(".celebrity").hide();
+      $("#Chris-Farley").show();
+    } else if (pink && dog && sushi) {
+      $(".celebrity").hide();
+      $("#Brad-Pitt").show();
+    } else if (blue && lizard && icecream) {
+      $(".celebrity").hide();
+      $("#Madonna").show();
+    } else {
+      $(".celebrity").hide();
+      $("#nomatch").show();
     }
-
   });
-
-
 });
